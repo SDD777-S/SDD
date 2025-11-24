@@ -1,0 +1,147 @@
+/* Общие стили */
+body {
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Шапка */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: block;
+    width: 318px;
+}
+
+/* Контейнер для контента */
+.container {
+    width: 960px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* Стили для страницы статьи (.article) */
+
+.article .header {
+    width: 960px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto
+}
+
+.article .post-title {
+    display: flex;
+    font-size: 2.2rem;
+    margin: 25px 0 15px;
+    justify-content: space-between; /* ← выравнивание влево */
+}
+
+.article .post-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+.article .article-author {
+    font-weight: bold;
+}
+
+.article .article-created-date {
+    display: flex;
+    font-style: italic;
+    margin-left: auto;
+}
+
+.article .content {
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Навигация в шапке статьи */
+.nav-secondary {
+    margin-top: 5px;
+}
+
+.all-articles-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.all-articles-link:hover {
+    text-decoration: underline;
+}
+
+/* Стили для страницы архива (.archive) */
+.archive .post-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.archive .post-title {
+    font-size: 1.5rem;
+    margin: 0 0 10px 0;
+}
+
+.archive .post-title a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.archive .post-title a:hover {
+    text-decoration: underline;
+}
+
+.archive .post-meta {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.archive .author {
+    font-weight: bold;
+}
+
+.archive .date {
+    font-style: italic;
+}
+
+/* Адаптивность */
+@media (max-width: 960px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo {
+        margin: 0 auto;
+    }
+
+    .article .post-meta,
+    .archive .post-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
